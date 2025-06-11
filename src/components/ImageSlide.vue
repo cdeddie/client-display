@@ -9,7 +9,7 @@ defineProps<Props>();
 
 <template>
   <div class="image-slide">
-    <img :src="imageSrc" alt="Story image" />
+    <img :src="imageSrc" alt="Story image" loading="lazy" />
   </div>
 </template>
 
