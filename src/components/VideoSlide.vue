@@ -14,7 +14,7 @@ watch(() => props.isVisible, (isVisible) => {
   
   if (isVisible) {
     videoRef.value.currentTime = 0;
-    videoRef.value.play().catch(error => {
+    videoRef.value.play().catch(() => {
       alert('Video autoplay failed');
     });
   } else {

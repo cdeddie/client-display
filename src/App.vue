@@ -79,7 +79,13 @@ const introPressed = ref(false);
         >
           <component 
             :is="slide.component" 
+            v-if="slide.imageSrc"
             :image-src="slide.imageSrc" 
+            :is-visible="index === activeIndex" 
+          />
+          <component 
+            :is="slide.component" 
+            v-else-if="slide.videoSrc"
             :video-src="slide.videoSrc"
             :is-visible="index === activeIndex" 
           />
